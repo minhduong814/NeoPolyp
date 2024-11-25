@@ -1,6 +1,8 @@
 import argparse
 import torch
 import cv2
+import os
+import zipfile
 import numpy as np
 from albumentations import Compose, Normalize, Resize
 from albumentations.pytorch import ToTensorV2
@@ -23,6 +25,11 @@ def parse_args():
     return parser.parse_args()
 
 def main():
+    if not os.path.exists("checkpoint/model.pth"):
+        print("UnZipping checkpoint...")
+        with zipfile.ZipFile("checkpoint/model.zip", 'r') as zip_ref:
+            zip_ref.extractall("checkpoint/")
+
     args = parse_args()
     image_path = args.image_path
 
