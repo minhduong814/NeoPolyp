@@ -7,7 +7,7 @@ Clone the repository:
 ```sh
 git clone https://github.com/minhduong814/NeoPolyp.git
 ```
-Download model.zip file here and put it in the folder named **checkpoint**. You may not need to unzip the file.
+Download `model.zip` file here and put it in the folder named `checkpoint`. You may not need to unzip the file.
 ```sh
 https://drive.google.com/drive/u/0/folders/1LLT6yK7rVimg5W3X-Gs7tnNjn3thUkoa
 ```
